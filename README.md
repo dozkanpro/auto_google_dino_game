@@ -33,3 +33,9 @@
 ## Customization
 - Adjust the threshold value in the script to fine-tune obstacle detection based on your screen's contrast and brightness.
 - Modify the region coordinates (rect_for_cactii and rect_for_birds) to fit your screen size or game window position if needed.
+
+## Screenshot
+<div align="center"><img src="time_machine_1.png" alt="UI Screenshot"/></div>
+
+## Contributing
+   Contributions are welcome! Please fork the repository and create a pull request with your changes.
