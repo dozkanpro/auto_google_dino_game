@@ -13,7 +13,6 @@ chrome_options.add_experimental_option("detach", True)
 # open game on the Chrome
 driver = webdriver.Chrome(options=chrome_options)
 driver.get(URL)
-
 time.sleep(3)
 
 # start the game
@@ -72,8 +71,5 @@ while keep:
     driver.save_screenshot('output.png')
     img = Image.open('output.png')
     is_collision(img)
-
-
-
 
 driver.quit()
