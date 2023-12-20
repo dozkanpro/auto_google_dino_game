@@ -27,4 +27,9 @@
 -  To exit the game, press the Enter key.
 
 ## How It Works
-- The script uses image recognition techniques via the Pillow library to analyze screenshots of the game window. It scans specific regions of the screen for obstacles (cacti and birds) and simulates key presses     (up and down) using pyautogui to make the dinosaur jump or duck accordingly.
+- The script uses image recognition techniques via the Pillow library to analyze screenshots of the game window.
+- It scans specific regions of the screen for obstacles (cacti and birds) and simulates key presses (up and down) using pyautogui to make the dinosaur jump or duck accordingly.
+
+## Customization
+- Adjust the threshold value in the script to fine-tune obstacle detection based on your screen's contrast and brightness.
+- Modify the region coordinates (rect_for_cactii and rect_for_birds) to fit your screen size or game window position if needed.
