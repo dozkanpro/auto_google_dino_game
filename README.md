@@ -17,3 +17,14 @@
     ```
     pip install -r requirements.txt
  - **Download and install Chrome WebDriver**: [Chrome WebDriver](https://chromedriver.chromium.org/downloads)
+
+ - **Run the Application:**
+  
+      ```
+       python main.py
+      ```
+-  The script will open the Chrome Dinosaur Game in a new Chrome window/tab and automatically play the game.
+-  To exit the game, press the Enter key.
+
+## How It Works
+- The script uses image recognition techniques via the Pillow library to analyze screenshots of the game window. It scans specific regions of the screen for obstacles (cacti and birds) and simulates key presses     (up and down) using pyautogui to make the dinosaur jump or duck accordingly.
