@@ -1,9 +1,8 @@
-import pyautogui
 from selenium import webdriver
 import pyautogui as gui
 from PIL import Image
 import time
-
+import keyboard
 
 URL = "https://elgoog.im/dinosaur-game/"
 
@@ -21,6 +20,8 @@ time.sleep(3)
 gui.press('up')
 
 time.sleep(3)
+
+keep = True
 
 
 def is_collision(img):
@@ -47,8 +48,32 @@ def is_collision(img):
             gui.press('down')
 
 
-while True:
+# Inject JavaScript to create a div element to display the message
+driver.execute_script("""
+    var messageDiv = document.createElement('div');
+    messageDiv.style.position = 'fixed';
+    messageDiv.style.top = '10px';
+    messageDiv.style.left = '80px';
+    messageDiv.style.backgroundColor = 'white';
+    messageDiv.style.padding = '10px';
+    messageDiv.style.zIndex = '9999';
+    document.body.appendChild(messageDiv);
+    window.messageDiv = messageDiv
+""")
+
+while keep:
+    # Update the message in the div element using JavaScript
+    driver.execute_script("""
+                window.messageDiv.innerText = "Press Enter key to Exit the game.";
+            """)
+    if keyboard.is_pressed('enter'):
+        keep = False
+
     driver.save_screenshot('output.png')
     img = Image.open('output.png')
     is_collision(img)
 
+
+
+
+driver.quit()
