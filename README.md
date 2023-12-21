@@ -6,6 +6,7 @@
  - pyautogui library
  - PIL (Python Imaging Library)
  - Chrome WebDriver
+ -  Java Script
 
 ## Getting Started
  - **Fork the repository:** You should **fork the repository** and then **clone it** so you can manage your own repo and use this only as a template.
@@ -24,7 +25,7 @@
        python main.py
       ```
 -  The script will open the Chrome Dinosaur Game in a new Chrome window/tab and automatically play the game.
--  **To exit the game:**  Press the Enter key.
+-  **To exit the game:**  "Press Enter key to Exit the game." is shown on left side of Chrome window. 
 
 ## How It Works
 - The script uses image recognition techniques via the Pillow library to analyze screenshots of the game window.
